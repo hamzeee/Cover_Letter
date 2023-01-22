@@ -13,6 +13,10 @@
   <h3>Make your Cover Letter</h3>
   <form action="/" method="post" enctype="multipart/form-data">
     <input type="text" name="name" placeholder="Enter your name" required />
+    <input type="text" name="degree" placeholder="Enter your university degree" required />
+    <input type="text" name="university" placeholder="Enter your university" required/>
+    <input type="text" name="job" placeholder="Enter your application job title" required/>
+    <input type="text" name="company" placeholder="Enter the company you are applying to" required/>
     <input type="submit" value="Generate Letter" />
   </form>
   {% if result %}
