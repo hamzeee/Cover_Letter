@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>OpenAI Quickstart</title>
+  <title>Cover Letter Generator</title>
   <link
     rel="shortcut icon"
     href="{{ url_for('static', filename='dog.png') }}"
@@ -10,10 +10,10 @@
 
 <body>
   <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
-  <h3>Name my pet</h3>
-  <form action="/" method="post">
-    <input type="text" name="animal" placeholder="Enter an animal" required />
-    <input type="submit" value="Generate names" />
+  <h3>Make your Cover Letter</h3>
+  <form action="/" method="post" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Enter your name" required />
+    <input type="submit" value="Generate Letter" />
   </form>
   {% if result %}
   <div class="result">{{ result }}</div>

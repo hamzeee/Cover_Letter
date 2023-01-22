@@ -10,11 +10,12 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 @app.route("/", methods=("GET", "POST"))
 def index():
     if request.method == "POST":
-        animal = request.form["animal"]
+        name = request.form["name"]
         response = openai.Completion.create(
             model="text-davinci-003",
-            prompt=generate_prompt(animal),
+            prompt=generate_prompt(name),
             temperature=0.6,
+            max_tokens=300,
         )
         return redirect(url_for("index", result=response.choices[0].text))
 
@@ -22,5 +23,8 @@ def index():
     return render_template("index.html", result=result)
 
 
-def generate_prompt(animal):
-    return "Suggest three names for an cow that is a superhero"
+def generate_prompt(name):
+    return """Generate a cover letter for a mechanical engineer {} in the
+    automotive industry who is looking to apply to the company Toyota for the
+    position of Manufacturing Specialist
+    """.format(name)
