@@ -43,7 +43,7 @@ form {
 }
 input[type="text"] {
   padding: 12px 16px;
-  border: 1px solid #10a37f;
+  border: 1px solid #103fa3;
   border-radius: 4px;
   margin-bottom: 24px;
 }
@@ -54,7 +54,7 @@ input[type="text"] {
 input[type="submit"] {
   padding: 12px 0;
   color: #fff;
-  background-color: #10a37f;
+  background-color: #103fa3;
   border: none;
   border-radius: 4px;
   text-align: center;

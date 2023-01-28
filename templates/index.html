@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <head>
   <title>Cover Letter Generator</title>
-  <link
-    rel="shortcut icon"
-    href="{{ url_for('static', filename='dog.png') }}"
-  />
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
 </head>
 
 <body>
-  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
   <h3>Make your Cover Letter</h3>
+  <p>A great cover letter is the basis of any career. It should be specific, up to date,
+  and well written keeping the position in mind, so give this a try and see for yourself!</p>
   <form action="/" method="post" enctype="multipart/form-data">
     <input type="text" name="name" placeholder="Enter your name" required />
     <input type="text" name="degree" placeholder="Enter your university degree" required />
