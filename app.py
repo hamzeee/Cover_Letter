@@ -30,5 +30,5 @@ def index():
 
 def generate_prompt(name,degree,university,job,company):
     return """Generate a cover letter for {} who is a {} 
-    graduate from {} applying for the poisition of {} in the company {} 
+    graduate from {} applying for the position of {} in the company {} 
     """.format(name,degree,university,job,company)
